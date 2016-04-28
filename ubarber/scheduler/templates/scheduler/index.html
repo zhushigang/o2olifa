@@ -1,0 +1,35 @@
+<!--check name list code-->
+<!--{% if name_list %}-->
+<!--<ul>-->
+<!--    {% for order in name_list %}-->
+<!--    <li><a href="/schedule/{{ order.id }}/">{{ order.name }}</a></li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--{% else %}-->
+<!--<p>No polls are available.</p>-->
+<!--{% endif %}-->
+
+
+<!--form submit code-->
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'scheduler/style.css' %}" />
+
+<h1>UBarber Appointment</h1>
+
+<form action="/scheduler/" method="post">
+    
+<input type='hidden' name='csrfmiddlewaretoken' value='YpyMkoKdxBb0bK61RpSP9d8XsG0L9IZZ' />
+    
+<p><label for="id_name">Name:</label> <input id="id_name" maxlength="100" name="name" type="text" /></p>
+<p><label for="id_address">Address:</label> <input id="id_address" maxlength="200" name="address" type="text" /></p>
+<p><label for="id_gender">Gender:</label>
+    <select id="id_gender" name="gender">
+            <option value="M">MALE</option>
+            <option value="F">FEMALE</option>
+    </select></p>
+
+<p><label for="id_time">Time of service:</label> <input id="id_time" name="time" type="text" /></br></p>
+
+<p><input type="submit" value="Submit" /></p>
+</form>

@@ -1,0 +1,23 @@
+/*body {
+    background: white url("images/background.jpg") no-repeat center;
+    background-size: cover;
+}*/
+
+body {
+    background-color:#d0e4fe;
+}
+
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+/*
+p {
+	text-align:left;
+}
+*/

@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('scheduler.urls')),
+    url(r'^scheduler/', include('scheduler.urls')),
+    url(r'^thanks/', include('scheduler.urls')),
 ]
