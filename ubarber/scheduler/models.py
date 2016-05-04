@@ -18,7 +18,7 @@ class Order(models.Model):
     mobile_number = models.CharField(max_length=10, default='')
     address1 = models.CharField(max_length=200, default='')
     address2 = models.CharField(max_length=200, default='')
-    date = models.DateField('time of date', null=True);
+    date = models.DateField('time of date', null=True)
     time = models.TimeField('time of service', null=True)
 
 class ServiceSlot(models.Model):

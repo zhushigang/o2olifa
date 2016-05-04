@@ -18,12 +18,15 @@ from .forms import AppointmentForm
 
 def index(request):
     if request.method == 'POST':
+        print request.POST
         form = AppointmentForm(request.POST)
         if form.is_valid():
-            form.save()
-            return HttpResponseRedirect('/thanks/')
+            # form.save()
+            print "Form is valid"
+            return HttpResponseRedirect('/scheduler/thanks/')
         else:
-            print "something is wrong"
+            print "something is wrong\n\n"
+            for row in form.fields.values(): print(row)
     else:
         form = AppointmentForm()
     return render(request, 'scheduler/index.html', {'form': form})
