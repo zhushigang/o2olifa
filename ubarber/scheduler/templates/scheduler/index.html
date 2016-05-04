@@ -21,38 +21,42 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Bootstrap CSS and bootstrap datepicker CSS used for styling the demo pages-->
         <link rel="stylesheet" href="/static/scheduler/css/datepicker.css">
-        <link rel="stylesheet" href="/static/scheduler/css/bootstrap.css">
+        <link rel="stylesheet" href="/static/scheduler/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <form id="eventForm" method="post" class="form-horizontal">
                 {% csrf_token %}
 
 
-                <div class="hero-unit">
+                    <label for="id_first_name">First Name:</label>
+                    <input id="id_first_name" class="form-control" placeholder="First Name" maxlength="100" name="first_name" type="text" />
+                    <label for="id_last_name">Last Name:</label>
+                    <input id="id_last_name" class="form-control" placeholder="Last Name" maxlength="100" name="last_name" type="text" /></p>
+                    <label for="id_address1">Address 1:</label>
+                    <input id="id_address1" class="form-control" placeholder="Address 1" maxlength="200" name="address1" type="text" /></p>
+                    <label for="id_address2">Address 2:</label>
+                    <input id="id_address2" class="form-control" placeholder="Address 2" maxlength="200" name="address2" type="text" /></p>
 
-                    <p><label for="id_first_name">Name:</label> <input id="id_first_name" class="form-control" placeholder="First Name" maxlength="100" name="first_name" type="text" /></p>
-                    <p><label for="id_last_name">Name:</label> <input id="id_last_name" class="form-control" placeholder="Last Name" maxlength="100" name="last_name" type="text" /></p>
-                    <p><label for="id_address1">Address:</label> <input id="id_address1" class="form-control" placeholder="Address 1" maxlength="200" name="address1" type="text" /></p>
-                    <p><label for="id_address2">Address:</label> <input id="id_address2" class="form-control" placeholder="Address 2" maxlength="200" name="address2" type="text" /></p>
-
-                    <p><label for="id_gender">Gender:</label>
-                        <select id="id_gender" name="gender">
+                    <label for="id_gender">Gender:</label>
+                        <select id="id_gender" name="gender" class="form-control">
                                 <option value="M">MALE</option>
                                 <option value="F">FEMALE</option>
-                        </select></p>
+                        </select>
 
 
-                    <p><label for="id_mobile_number">Address:</label> <input id="id_mobile_number" class="form-control" placeholder="Mobile Number" maxlength="200" name="mobile_number" type="text" /></p>
+                    <label for="id_mobile_number">Mobile Number:</label>
+                    <input id="id_mobile_number" class="form-control" placeholder="Mobile Number" maxlength="200" name="mobile_number" type="text" />
 
-                    <p><label for="id_date">Date of service:</label> <input id="id_date" class="form-control" name="date" type="text" /></p>
-                    <p><label for="id_time">Time of service:</label> <input id="id_time" class="form-control" name="time" type="text" /></p>
+                    <label for="id_date">Date of service:</label>
+                    <input id="id_date" class="form-control" name="date" type="text" />
+                    <label for="id_time" >Time of service:</label>
+                    <input id="id_time" class="form-control" name="time" type="text" />
+                    <p></p>
+                    <input class="form-control" type="submit" value="Submit" />
 
-                    <p><input class="form-control" type="submit" value="Submit" /></p>
 
 
-
-                </div>
 
 
 
@@ -61,6 +65,7 @@
         <!-- Load jQuery and bootstrap datepicker scripts -->
         <script src="/static/scheduler/js/jquery-1.9.1.min.js"></script>
         <script src="/static/scheduler/js/bootstrap-datepicker.js"></script>
+        <script src="/static/scheduler/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             // When the document is ready
             $(document).ready(function () {
